@@ -1,0 +1,24 @@
+/* bugSolution.css */
+
+/* Correcting inconsistent units */
+.correct-units {
+  width: calc(100% - 20px); /* Adding 'px' unit */
+}
+
+/* Addressing operator precedence (though this example is less likely to be problematic, it demonstrates correct use) */
+.correct-precedence {
+  width: calc((100% - 20px) / 2); /* Parentheses enforce correct order */
+}
+
+/* Simplifying nested calculations for readability */
+.correct-nested {
+  width: 200px;
+  height: calc(100% - 20px);
+}
+
+/* Alternatively, you might break down complex nested calc into smaller, more manageable parts */
+.correct-nested-alternative {
+  --container-width: calc(100% - 20px);
+  --element-width: 50%;
+  width: calc(var(--container-width) * var(--element-width));
+}
